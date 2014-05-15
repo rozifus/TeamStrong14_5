@@ -1,0 +1,37 @@
+#:kivy 1.8.0
+
+<TeamStrong>:
+    size_hint: 1,1
+    pos_hint: {'center_x': .5, 'center_y': .5}
+
+<Main>:
+    size_hint: 1,1
+    pos_hint: {'center_x': .5, 'center_y': .5}
+    valign: 'top'
+
+<Menu>:
+    id: main_menu
+    size_hint: 1,1
+    pos_hint: {'center_x': .5, 'center_y': .5}
+    valign: 'top'
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Button:
+            text: "New Game"
+            on_release: root.new_game_button_pressed()
+
+        Button:
+            text: "Quit"
+
+<Game>:
+    id: main_game
+
+    FloatLayout:
+
+        Button:
+            text: "End Game"
+            on_release: root.end_game_button_pressed()
+
+

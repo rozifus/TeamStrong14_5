@@ -1,4 +1,4 @@
 #! /usr/bin/env python
 
-from gamelib import main
-main.main()
+from gamelib import teamstrong
+teamstrong.TeamStrong().run()
