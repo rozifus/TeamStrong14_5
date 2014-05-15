@@ -6,6 +6,7 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty, StringProperty
 from kivy.uix.widget import Widget
+from hanger import Hanger
 
 class Game(FloatLayout):
 
@@ -14,15 +15,18 @@ class Game(FloatLayout):
 
         self.register_event_type('on_end_game')
 
+        self.hanger = Hanger()
+        self.add_widget(self.hanger)
+
     def end_game_button_pressed(self):
         self.dispatch('on_end_game')
 
     def on_end_game(self):
         pass
 
-    def goto_botconfig(self):
+    def trans_hangar(self):
         pass
 
-    def goto_scenario(self):
+    def trans_scenario(self):
         pass
 

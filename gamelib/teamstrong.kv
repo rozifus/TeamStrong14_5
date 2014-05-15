@@ -1,19 +1,6 @@
 #:kivy 1.8.0
 
-<TeamStrong>:
-    size_hint: 1,1
-    pos_hint: {'center_x': .5, 'center_y': .5}
-
-<Main>:
-    size_hint: 1,1
-    pos_hint: {'center_x': .5, 'center_y': .5}
-    valign: 'top'
-
 <Menu>:
-    id: main_menu
-    size_hint: 1,1
-    pos_hint: {'center_x': .5, 'center_y': .5}
-    valign: 'top'
 
     BoxLayout:
         orientation: 'vertical'
@@ -26,12 +13,33 @@
             text: "Quit"
 
 <Game>:
-    id: main_game
 
-    FloatLayout:
+
+<Hanger>:
+    orientation: 'horizontal'
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        FloatLayout:
+
+            Button:
+                text: "bot visual"
 
         Button:
-            text: "End Game"
-            on_release: root.end_game_button_pressed()
+            text: "bot info"
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Button:
+            text: "build options"
+            size_hint: 1, .7
+
+        Button:
+            text: "build info"
+            size_hint: 1, .3
+
+
 
 
